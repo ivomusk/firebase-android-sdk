@@ -17,5 +17,21 @@
 package com.google.firebase.dataconnect.demo.gqlgen
 
 import kotlin.script.experimental.annotations.KotlinScript
+import kotlin.script.experimental.api.ScriptAcceptedLocation
+import kotlin.script.experimental.api.ScriptCompilationConfiguration
+import kotlin.script.experimental.api.acceptedLocations
+import kotlin.script.experimental.api.ide
 
-@KotlinScript(fileExtension = "dataconnectgql.kts") abstract class DataConnectGqlScript
+@KotlinScript(
+  displayName = "Data Connect GraphGQL Generator",
+  fileExtension = "dataconnectgql.kts",
+  compilationConfiguration = DataConnectGqlScriptCompilationConfiguration::class,
+)
+abstract class DataConnectGqlScript {
+  fun foo() {
+    println("foo called!")
+  }
+}
+
+object DataConnectGqlScriptCompilationConfiguration :
+  ScriptCompilationConfiguration({ ide { acceptedLocations(ScriptAcceptedLocation.Everywhere) } })
