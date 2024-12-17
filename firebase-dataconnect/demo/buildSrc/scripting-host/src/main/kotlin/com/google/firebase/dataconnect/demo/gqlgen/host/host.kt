@@ -28,7 +28,12 @@ import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 import kotlin.script.experimental.jvmhost.createJvmCompilationConfigurationFromTemplate
 
 fun main(vararg args: String) {
-  if (args.size != 1) {
+  if (args.size == 0) {
+    throw InvalidCommandLineArguments(
+      "expected exactly 1 argument, the path of the script to execute, " +
+        "but no arguments were given"
+    )
+  } else if (args.size != 1) {
     throw InvalidCommandLineArguments(
       "invalid command-line arguments: " +
         args.toList().joinToString(" ") +
