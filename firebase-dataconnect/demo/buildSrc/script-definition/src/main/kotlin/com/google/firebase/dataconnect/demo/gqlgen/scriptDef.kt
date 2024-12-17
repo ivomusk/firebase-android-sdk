@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-plugins { kotlin("jvm") version embeddedKotlinVersion }
+package com.google.firebase.dataconnect.demo.gqlgen
 
-dependencies {
-  implementation("org.jetbrains.kotlin:kotlin-scripting-common:$embeddedKotlinVersion")
-  implementation("org.jetbrains.kotlin:kotlin-scripting-jvm:$embeddedKotlinVersion")
-}
+import kotlin.script.experimental.annotations.KotlinScript
+
+@KotlinScript(fileExtension = "dataconnectgql.kts") abstract class DataConnectGqlScript
