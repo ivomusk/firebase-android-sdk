@@ -136,7 +136,7 @@ internal constructor(
   suspend fun generateContent(request: GenerateContentRequest): GenerateContentResponse.Internal =
     try {
       client
-        .post("${requestOptions.endpoint}/${requestOptions.apiVersion}/$model:generateContent") {
+        .post(requestOptions.urlOverride ?: "${requestOptions.endpoint}/${requestOptions.apiVersion}/$model:generateContent") {
           applyCommonConfiguration(request)
           applyHeaderProvider()
         }
@@ -150,7 +150,7 @@ internal constructor(
   suspend fun generateImage(request: GenerateImageRequest): ImagenGenerationResponse.Internal =
     try {
       client
-        .post("${requestOptions.endpoint}/${requestOptions.apiVersion}/$model:predict") {
+        .post(requestOptions.urlOverride ?: "${requestOptions.endpoint}/${requestOptions.apiVersion}/$model:predict") {
           applyCommonConfiguration(request)
           applyHeaderProvider()
         }
@@ -180,7 +180,7 @@ internal constructor(
   suspend fun countTokens(request: CountTokensRequest): CountTokensResponse.Internal =
     try {
       client
-        .post("${requestOptions.endpoint}/${requestOptions.apiVersion}/$model:countTokens") {
+        .post(requestOptions.urlOverride ?: "${requestOptions.endpoint}/${requestOptions.apiVersion}/$model:countTokens") {
           applyCommonConfiguration(request)
           applyHeaderProvider()
         }

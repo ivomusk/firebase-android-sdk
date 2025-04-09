@@ -27,6 +27,7 @@ internal constructor(
   internal val timeout: Duration,
   internal val endpoint: String = "https://firebasevertexai.googleapis.com",
   internal val apiVersion: String = "v1beta",
+  internal val urlOverride: String? = null,
 ) {
 
   /**
@@ -38,7 +39,9 @@ internal constructor(
   @JvmOverloads
   public constructor(
     timeoutInMillis: Long = 180.seconds.inWholeMilliseconds,
+    urlOverride: String? = null
   ) : this(
     timeout = timeoutInMillis.toDuration(DurationUnit.MILLISECONDS),
+    urlOverride = urlOverride,
   )
 }
