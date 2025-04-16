@@ -15,6 +15,11 @@
 * fix: avoid android.os.strictmode.UnbufferedIoViolation (resubmission of PR #6565) (#6822)   
   [pr](https://github.com/firebase/firebase-android-sdk/pull/6822) [commit](https://github.com/firebase/firebase-android-sdk/commit/19c8c7f822c130698cf2db8e9ee3b9f11fa91b9e)  [Angel Leon]
 
+## firebase-sessions
+      
+* Changes in the Session Test App to verify behaviour with Fireperf #no-changelog (#6809)   
+  [pr](https://github.com/firebase/firebase-android-sdk/pull/6809) [commit](https://github.com/firebase/firebase-android-sdk/commit/278e437a7dd02c9046186eda707a020e63e214d4)  [Tejas Deshpande]
+
 ## firebase-crashlytics-ndk
       
 * Upgrade to Android ndk r27c and update Crashpad to latest commit (#6814)   
