@@ -23,11 +23,6 @@
 * Updated internal Crashpad version (#6797)   
   [pr](https://github.com/firebase/firebase-android-sdk/pull/6797) [commit](https://github.com/firebase/firebase-android-sdk/commit/5ff9d9576741c6a8fbcdf0507d53da8b08a4f146)  [Matthew Robertson]
 
-## firebase-sessions
-      
-* Changes in the Session Test App to verify behaviour with Fireperf #no-changelog (#6809)   
-  [pr](https://github.com/firebase/firebase-android-sdk/pull/6809) [commit](https://github.com/firebase/firebase-android-sdk/commit/278e437a7dd02c9046186eda707a020e63e214d4)  [Tejas Deshpande]
-
 ## firebase-crashlytics/ktx
       
 

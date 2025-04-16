@@ -48,16 +48,6 @@
                 "prLink": "https://github.com/firebase/firebase-android-sdk/pull/6797"
             }
         ],
-        "firebase-sessions": [
-            {
-                "commitId": "278e437a7dd02c9046186eda707a020e63e214d4",
-                "prId": "6809",
-                "author": "Tejas Deshpande",
-                "message": "Changes in the Session Test App to verify behaviour with Fireperf #no-changelog (#6809)\n\nThis change adds a way to repeatedly log identical performance traces in\ndifferent processes.\n- Currently traces on different activities are logged on different\nFireperf Sessions.\n- Adds additional logging to help identify different Firebase instances\nin different processes.\n- Adds Fireperf custom attributes to identify processes.\n",
-                "commitLink": "https://github.com/firebase/firebase-android-sdk/commit/278e437a7dd02c9046186eda707a020e63e214d4",
-                "prLink": "https://github.com/firebase/firebase-android-sdk/pull/6809"
-            }
-        ],
         "firebase-crashlytics/ktx": [
         ],
         "firebase-dataconnect": [
